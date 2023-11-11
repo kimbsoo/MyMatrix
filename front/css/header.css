@@ -1,0 +1,113 @@
+:root {
+  --light-gray: #f4f4f4;
+  --main-blue: #4aa8d8;
+  --dark-gray: #606060;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.inner {
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.blue {
+  color: var(--main-blue);
+}
+
+/* 헤더 */
+header {
+  background-color: var(--light-gray);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+}
+
+#service-title a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: var(--main-blue);
+  font-weight: 900;
+}
+
+/* 헤더 비회원 */
+.unsigned {
+  font-size: 1.6rem;
+  display: flex;
+}
+
+.unsigned a {
+  color: black;
+  text-decoration: none;
+}
+
+.sign-in {
+  margin-right: 1rem;
+}
+
+/* 헤더 회원 */
+.signed {
+  font-size: 1.6rem;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 100%;
+}
+
+.dropdown-content button {
+  font-size: 1.5rem;
+  width: 100%;
+  border: 1px solid var(--dark-gray);
+}
+
+.dropdown-content button:hover {
+  color: white;
+  background-color: var(--dark-gray);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+@media only all and (max-width: 400px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media only all and (min-width: 1200px) {
+  .inner {
+    max-width: 1200px;
+  }
+
+  html {
+    font-size: 12px;
+  }
+}
